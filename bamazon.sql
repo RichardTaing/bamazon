@@ -3,7 +3,7 @@
 create database bamazon;
 create table products
 (
-    --the characteristics of all the fields in the products table
+    -- the characteristics of all the fields in the products table
     id int not null
     auto_increment,
 product_name varchar
