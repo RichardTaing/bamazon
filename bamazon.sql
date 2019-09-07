@@ -1,15 +1,17 @@
-
 -- creates the database and the table products 
+DROP DATABASE IF EXISTS bamazon;
 create database bamazon;
+USE bamazon;
+
 create table products
 (
     -- the characteristics of all the fields in the products table
-    id int not null
-    auto_increment,
+    id INT NOT NULL
+    AUTO_INCREMENT,
 product_name varchar
-    (50),
+    (200),
 department_name varchar
-    (50),
+    (100),
 price int,
 stock_quantity int,
 primary key
@@ -47,7 +49,7 @@ primary key
         department_id int not null
         auto_increment,
   department_name varchar
-        (50),
+        (100),
   overhead int,
   primary key
         (department_id));
