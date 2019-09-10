@@ -7,24 +7,24 @@ _Bamazon is a console store front where a user can buy product and a manager can
 - bamazon.js
 
   - Create a MySQL database to handle the store
-  - Create a table to handle all the store's products giving the product an ID of:
+  - Create a table to handle all the store's inventory and identifying them by:
 
     - Product ID
     - Name
     - Department
     - Price to Buyer
-    - Ammount in Stock
-    - Total Sale ammount (bonus)
+    - Amount in Stock
+    - Total Sale amount (bonus)
 
   - Connect the bamazon.js file to the database to allow connection.query's
-  - Make a function to let the customer order a product based on its product id (integer)
-  - Let the use choose an ammount they want to buy and tell them how much it's going to cost
+  - Make a function to let the user order a product based on its product id (integer)
+  - Let the user choose an amount they want to purchase and the cost per item/s
   - Update the inventory in the database to the order
 
 - bamazonManager.js (bonus)
 
-  - The file lets the user play a managerial role in the app restocking items and even ordring new items
-  - running the app gives the user 4 options:
+  - The file lets the user play a managerial role in the app restocking items and even ordering new items
+  - running the app gives the Manager four options:
 
     - See a list of all available products in stock
     - See a list of products that are low (<5)
@@ -34,17 +34,22 @@ _Bamazon is a console store front where a user can buy product and a manager can
   - Updates the MySQL database accordingly
 
 - bamazonSupervisor.js (bonus)
+
   - This file lets the user play a supervisor role in the app, making sure the store is making money
-  - To work a new database, departments was created the fields were
+  - running the app allows the Supervisor to add a new department, with the following fields:
+
     - department_id
     - department_name
-    - overhead (this was an number I created to represent the overhead in each department)
-  - A SQL left join was used to share commonents of the products and departments tables looking for when a products department matched a name in the departent
-  - By combining the product.product_sales and department.overhead a field was made showing the profit of each department
+    - overheads
+
+  - The products table displays the products, departments, price, stock, and sales table
   - Running the app gives the supervisor 2 options:
+
     - Seeing the departments, this is where the join is used showing profits
     - Add a new department with its own overhead
+
   ### Demo of Working Bamazon
+
   [Bamazon](https://drive.google.com/open?id=1S7xrBc2cQvxAnocY9_9Lv9tgpr1LpXAJ)
 
 ## How to Use
