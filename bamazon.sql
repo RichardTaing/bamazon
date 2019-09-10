@@ -3,9 +3,9 @@ DROP DATABASE IF EXISTS bamazon;
 create database bamazon;
 USE bamazon;
 
+-- the characteristics of all the fields in the products table
 create table products
 (
-    -- the characteristics of all the fields in the products table
     id INT NOT NULL
     AUTO_INCREMENT,
 product_name varchar
@@ -18,7 +18,7 @@ primary key
     (id)
 
 );
-    --populates the initial retail
+    -- populates the initial retail
     insert into products
         (product_name, department_name, price, stock_quantity)
     values
@@ -32,18 +32,11 @@ primary key
         ('Great Southern Lamb Legs Boned & Rolled 1.8kg - 2kg', 'Weekly Specials', 32, 7),
         ('Stubbs Ass Kickin Mini Chilli Set', 'BBQ Pantry', 7.95, 25),
         ('Arrosto Gas Smoker', 'Barbeques', 329, 2);
-    --adds the produc_sales field for part 3
+
+    -- adds the produc_sales field for part 3
     ALTER TABLE products ADD COLUMN product_sales int;
-    --populates the department table with name and dummy value for overhead
-    INSERT INTO departments
-        (department_name, overhead)
-    values
-        ('Barbeques', 50),
-        ('BBQ Pantry', 60),
-        ('Bulk Meat Packs', 20),
-        ('Weekly Specials', 15),
-        ('Heating', 30);
-    --creates the departments table for part 3
+
+    -- creates the departments table for part 3
     CREATE TABLE departments
     (
         department_id int not null
@@ -53,6 +46,17 @@ primary key
   overhead int,
   primary key
         (department_id));
+
+        -- populates the department table with name and dummy value for overhead
+        INSERT INTO departments
+            (department_name, overhead)
+        values
+            ('Barbeques', 50),
+            ('BBQ Pantry', 60),
+            ('Bulk Meat Packs', 20),
+            ('Weekly Specials', 15),
+            ('Heating', 30);
+
         select *
         from departments;
         select *
