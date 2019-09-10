@@ -33,7 +33,7 @@ primary key
         ('Stubbs Ass Kickin Mini Chilli Set', 'BBQ Pantry', 7.95, 25),
         ('Arrosto Gas Smoker', 'Barbeques', 329, 2);
 
-    -- adds the produc_sales field for part 3
+    -- adds the product_sales field for part 3
     ALTER TABLE products ADD COLUMN product_sales int;
 
     -- creates the departments table for part 3
